@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduNova — Roberto Sánchez Vargas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" id="mainNavbar" aria-label="Navegación principal">
+    <div class="navbar-inner">
+
+      <button class="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="index.html#hero">Inicio</a>
+        <a href="index.html#about">Sobre mí</a>
+        <a href="03-projects.html" class="active">Proyectos</a>
+        <a href="index.html#skills">Habilidades</a>
+        <a href="index.html#contact" class="navbar-cta">Hablemos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ MAIN ═══════════════════════════ -->
+  <main>
+    <div class="container">
+
+      <!-- Back -->
+      <a href="03-projects.html" class="proj-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver a Proyectos
+      </a>
+
+      <!-- Hero -->
+      <header class="proj-hero">
+        <p class="proj-eyebrow">Plataforma de E-Learning</p>
+        <h1 class="proj-title">EduNova</h1>
+        <p class="proj-desc">
+          EduNova CR es una plataforma de e-learning costarricense, diseñada para
+          estudiantes y profesionales centroamericanos. El proyecto cubre la experiencia
+          completa: landing page, catálogo de cursos, detalle del curso, login/registro,
+          carrito y checkout, confirmación de compra, dashboard, página corporativa y contacto.
+          Incluye un prototipo de alta fidelidad en Figma y una solución responsiva basada
+          en Bootstrap 5, con enfoque en accesibilidad, confianza y pertinencia local.
+        </p>
+        <div class="proj-tags">
+          <span class="pill-tag">Figma</span>
+          <span class="pill-tag">UX/UI Design</span>
+          <span class="pill-tag">E-Learning</span>
+          <span class="pill-tag">Costa Rica</span>
+          <span class="pill-tag">Bootstrap 5</span>
+          <span class="pill-tag">Prototyping</span>
+        </div>
+        <div class="proj-meta-row">
+          <div class="proj-meta-item">
+            <span class="proj-meta-label">Año</span>
+            <span class="proj-meta-value">2024</span>
+          </div>
+          <div class="proj-meta-item">
+            <span class="proj-meta-label">Categoría</span>
+            <span class="proj-meta-value">Diseño de Producto</span>
+          </div>
+          <div class="proj-meta-item">
+            <span class="proj-meta-label">Estado</span>
+            <span class="proj-meta-value" style="color: var(--teal)">● Entregado</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Definición del Negocio -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">00</span>
+          <h2 class="proj-section-title">Definición del Negocio</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          EduNova CR es una plataforma de educación en línea costarricense, con cursos digitales adaptados
+          al contexto del mercado laboral local. La propuesta está pensada para ofrecer formación en
+          español desde cualquier dispositivo, con una experiencia accesible y confiable.
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--teal); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Modelo de Negocio</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Suscripciones mensuales y compra individual de cursos.</li>
+              <li>✦ Prueba gratuita de 30 días para hasta 3 cursos.</li>
+              <li>✦ Opción de renta como SaaS para organizaciones.</li>
+              <li>✦ Enfoque B2C con atención a estudiantes y profesionales.</li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Pilares de valor</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Accesibilidad: contenido disponible 24/7 desde cualquier dispositivo.</li>
+              <li>✦ Pertinencia local: cursos adaptados al contexto laboral costarricense.</li>
+              <li>✦ Cercanía: interfaz en español con experiencia pensada para el usuario local.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estrategia del Proyecto -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">00</span>
+          <h2 class="proj-section-title">Estrategia del Proyecto</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--teal); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Problema & Oportunidad</h3>
+            <p style="color: var(--muted); margin-bottom: 1.25rem; line-height: 1.8; font-size: 1.05rem;">
+              Costa Rica y Centroamérica carecen de plataformas de e-learning adaptadas al
+              contexto local, con contenido en español, precios accesibles y una experiencia
+              móvil amigable. EduNova CR propone una alternativa 100% costarricense enfocada
+              en relevancia regional, accesibilidad y calidad educativa.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Accesibilidad 24/7 en cualquier dispositivo.</li>
+              <li>✦ Cursos relevantes para el mercado laboral costarricense.</li>
+              <li>✦ Suscripciones mensuales, compra individual y prueba gratuita.</li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Objetivos del Proyecto</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Diseñar una arquitectura de información clara y mobile-first.</li>
+              <li>✦ Crear una interfaz que transmita cercanía, confianza y modernidad.</li>
+              <li>✦ Entregar un flujo de inscripción y pago simple y responsivo.</li>
+              <li>✦ Producir un prototipo de alta fidelidad y guía de estilos con Bootstrap 5.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--teal); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Usuario Meta</h3>
+            <p style="color: var(--muted); margin-bottom: 1.25rem; line-height: 1.8; font-size: 1.05rem;">
+              Andrea Mora, 22 años, estudiante universitaria de San José. Mobile-first,
+              habla español, ingreso medio-bajo a medio. Busca cursos locales, certificados
+              y una experiencia de aprendizaje clara y accesible.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Motivaciones: aprender a su ritmo, obtener certificados y usar contenido en español.</li>
+              <li>✦ Frustraciones: plataformas en inglés, costos altos, interfaces complejas.</li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Investigación</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Benchmarking de competidores como Coursera, Udemy, Platzi y Khan Academy.</li>
+              <li>✦ Encuestas a más de 15 usuarios del segmento objetivo en Costa Rica.</li>
+              <li>✦ Análisis de tareas para optimizar flujos de búsqueda, compra y acceso al perfil.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alcance del Proyecto -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">00</span>
+          <h2 class="proj-section-title">Alcance del Proyecto</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.75rem;">
+          <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--teal); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Dentro del alcance</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Diseño UX/UI de páginas principales: Home, Catálogo, Detalle de Curso, Login/Registro, Perfil del Estudiante y Contacto.</li>
+              <li>✦ Prototipo navegable de alta fidelidad.</li>
+              <li>✦ Guía de estilos con tipografías, colores y componentes.</li>
+              <li>✦ Estructura HTML/CSS responsiva basada en Bootstrap 5.</li>
+              <li>✦ Simulación de flujo de pagos y compra de cursos.</li>
+              <li>✦ Presentación del ciclo completo de inscripción y acceso.</li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Fuera del alcance</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Desarrollo de back-end y base de datos en producción.</li>
+              <li>✦ Perfil docente para gestión de cursos y subida de contenido.</li>
+              <li>✦ Creación real de contenido de cursos.</li>
+              <li>✦ Integración con plataformas de video reales.</li>
+              <li>✦ Aplicación móvil nativa iOS/Android.</li>
+              <li>✦ Autenticación real; la solución se simuló con LocalStorage.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Arquitectura del Sitio -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">00</span>
+          <h2 class="proj-section-title">Arquitectura del Sitio</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          El proyecto incluye una estructura de menú y navegación pensada para un usuario digital de Costa Rica: home, catálogo de cursos, detalle de curso, login/registro, dashboard, sobre nosotros, contacto y carrito de pago.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem;">
+          <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--teal); margin-bottom: 1.25rem;">Navegación principal</h3>
+            <ul style="list-style: none; padding-left: 0; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>• Home / Inicio</li>
+              <li>• Catálogo de cursos</li>
+              <li>• Detalle del curso</li>
+              <li>• Login / Registro</li>
+              <li>• Carrito / Pago</li>
+              <li>• Dashboard del estudiante</li>
+              <li>• Sobre Nosotros</li>
+              <li>• Contacto</li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 1.25rem;">Componentes clave</h3>
+            <ul style="list-style: none; padding-left: 0; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>• Búsqueda y filtros de cursos</li>
+              <li>• Tarjetas de curso con instructor, calificación y precio</li>
+              <li>• Formulario de contacto</li>
+              <li>• Confirmación de compra</li>
+              <li>• Progreso y certificados en el dashboard</li>
+              <li>• Página de marca con misión y valores</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proceso y Herramientas -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">00</span>
+          <h2 class="proj-section-title">Proceso y Herramientas</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--teal); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Workflow</h3>
+            <ul style="list-style: none; padding-left: 0; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>01 Empatizar: benchmarking, encuesta de usuario y análisis de tareas.</li>
+              <li>02 Definir: usuario meta, planteamiento, alcance y objetivos.</li>
+              <li>03 Idear: look & feel, arquitectura de información, flujos y guía de estilos.</li>
+              <li>04 Prototipar: wireframes desktop, mobile y prototipo navegable.</li>
+              <li>05 Implementar: HTML/CSS, Bootstrap 5, JavaScript y diseño responsive.</li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Herramientas y estilos</h3>
+            <ul style="list-style: none; padding-left: 0; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>• Figma para prototipos e interfaz.</li>
+              <li>• Bootstrap 5 con enfoque mobile-first.</li>
+              <li>• Paleta de color: #0D0F14, #00B4A6, #C9A84C.</li>
+              <li>• Tipografías: Trebuchet MS y Calibri.</li>
+              <li>• Prototipo en Visual Studio y diseño responsivo.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 · Landing Page -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">01</span>
+          <h2 class="proj-section-title">Landing Page</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Página de inicio diseñada para captar atención y convertir visitantes en usuarios.
+          Con hero section impactante, propuesta de valor clara y call-to-action estratégicamente
+          posicionados para maximizar las inscripciones.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="0"
+               data-src="img/Proyecto%20EduNova/01_index_desktop.png">
+            <img src="img/Proyecto%20EduNova/01_index_desktop.png"
+                 alt="EduNova - Landing Page" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · Catálogo de Cursos -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">02</span>
+          <h2 class="proj-section-title">Catálogo de Cursos</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Pantalla de exploración de cursos disponibles con filtros, búsqueda
+          y vista en grid optimizada. Cada tarjeta de curso muestra información clave:
+          título, descripción breve, instructor, calificación y precio.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="1"
+               data-src="img/Proyecto%20EduNova/02_catalogo_desktop.png">
+            <img src="img/Proyecto%20EduNova/02_catalogo_desktop.png"
+                 alt="EduNova - Catálogo de Cursos" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · Detalle del Curso -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">03</span>
+          <h2 class="proj-section-title">Detalle del Curso</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Página de detalle con toda la información del curso: descripción completa,
+          temario, instructor, testimonios de estudiantes, y botón de inscripción.
+          Diseña para convertir y proporcionar confianza al usuario.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="2"
+               data-src="img/Proyecto%20EduNova/03_detalle_desktop.png">
+            <img src="img/Proyecto%20EduNova/03_detalle_desktop.png"
+                 alt="EduNova - Detalle del Curso" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 · Login -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">04</span>
+          <h2 class="proj-section-title">Sistema de Login</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Interfaz de autenticación limpia y segura con opciones de login tradicional
+          y sociales (Google, GitHub). Incluye formulario de registro y recuperación de contraseña.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="3"
+               data-src="img/Proyecto%20EduNova/04_login_desktop.png">
+            <img src="img/Proyecto%20EduNova/04_login_desktop.png"
+                 alt="EduNova - Login" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 · Carrito y Pago -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">05</span>
+          <h2 class="proj-section-title">Carrito y Checkout</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Interfaz de pago diseñada para minimizar fricciones y maximizar conversión.
+          Incluye resumen de compra, métodos de pago múltiples y confirmación de transacción.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="4"
+               data-src="img/Proyecto%20EduNova/05_pago_desktop.png">
+            <img src="img/Proyecto%20EduNova/05_pago_desktop.png"
+                 alt="EduNova - Pago" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 · Confirmación de Compra -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">06</span>
+          <h2 class="proj-section-title">Confirmación de Compra</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Pantalla de éxito que refuerza la confianza del usuario tras completar
+          la compra. Incluye resumen del pedido, enlace al contenido y opciones para
+          explorar más cursos.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="5"
+               data-src="img/Proyecto%20EduNova/06_detalle-comprado_desktop.png">
+            <img src="img/Proyecto%20EduNova/06_detalle-comprado_desktop.png"
+                 alt="EduNova - Confirmación de Compra" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 · Dashboard de Usuario -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">07</span>
+          <h2 class="proj-section-title">Dashboard de Usuario</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Centro de control personalizado donde usuarios ven sus cursos activos,
+          progreso de aprendizaje, certificados obtenidos y recomendaciones personalizadas.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="6"
+               data-src="img/Proyecto%20EduNova/07_dashboard_desktop.png">
+            <img src="img/Proyecto%20EduNova/07_dashboard_desktop.png"
+                 alt="EduNova - Dashboard" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 · Sobre Nosotros -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">08</span>
+          <h2 class="proj-section-title">Página Sobre Nosotros</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Sección de marca que comunica la misión, visión y valores de EduNova.
+          Incluye historia de la plataforma, equipo fundador y propuesta de valor diferenciadora.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="7"
+               data-src="img/Proyecto%20EduNova/08_sobre-nosotros_desktop.png">
+            <img src="img/Proyecto%20EduNova/08_sobre-nosotros_desktop.png"
+                 alt="EduNova - Sobre Nosotros" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 · Contacto -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">09</span>
+          <h2 class="proj-section-title">Formulario de Contacto</h2>
+        </div>
+        <p style="color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7;">
+          Página de contacto con formulario optimizado para conversión.
+          Incluye campos de nombre, email, asunto y mensaje con validaciones en tiempo real.
+        </p>
+        <div class="mockup-feature">
+          <div class="media-item"
+               data-gallery="edunova" data-idx="8"
+               data-src="img/Proyecto%20EduNova/09_contacto_desktop.png">
+            <img src="img/Proyecto%20EduNova/09_contacto_desktop.png"
+                 alt="EduNova - Contacto" loading="lazy" />
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Síntesis del Proyecto -->
+      <section class="proj-section">
+        <div class="proj-section-header">
+          <span class="proj-section-num">10</span>
+          <h2 class="proj-section-title">Síntesis del Proyecto</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+          <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--teal); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Desafíos Abordados</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Diseño de user journey completo desde descubrimiento hasta aprendizaje</li>
+              <li>✦ Optimización de funnel de conversión en plataforma educativa</li>
+              <li>✦ Balance entre funcionalidad y simplicidad en dashboard</li>
+              <li>✦ Accesibilidad y adaptabilidad a múltiples dispositivos</li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase;">Resultados & Aprendizajes</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--off); font-size: 1.05rem; line-height: 1.75;">
+              <li>✦ Sistema de diseño escalable en Figma con componentes reutilizables</li>
+              <li>✦ Prototipo interactivo de flujo de usuario completo</li>
+              <li>✦ Design thinking aplicado a e-learning</li>
+              <li>✦ Validación de decisiones mediante user testing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════ LIGHTBOX ═══════════════════════════ -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Visor de imagen expandida">
+    <div class="lb-backdrop"></div>
+    <div class="lb-content">
+      <img class="lb-img" alt="" />
+      <video class="lb-video" controls playsinline></video>
+    </div>
+    <button class="lb-close" aria-label="Cerrar visor"><span aria-hidden="true">✕</span></button>
+    <button class="lb-nav lb-prev" aria-label="Anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg></button>
+    <button class="lb-nav lb-next" aria-label="Siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19l7-7-7-7"/></svg></button>
+    <div class="lb-counter"></div>
+    <div class="lb-hint">usa scroll para zoom, arrastra para mover</div>
+  </div>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Roberto Sánchez <span>Vargas</span></div>
+        <p class="footer-copy">© 2024 Todos los derechos reservados</p>
+        <nav class="footer-links">
+          <a href="index.html#contact">Contacto</a>
+          <a href="https://linkedin.com/in/roberto-sanchez-vargas" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    initCarousel('carousel-pub', 'dots-pub');
+  </script>
+
+</body>
+</html>

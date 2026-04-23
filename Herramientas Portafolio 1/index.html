@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Roberto Sánchez Vargas — Technical Curriculum Developer e Instructional Designer con 9+ años en Amazon, Experian y ServiceNow." />
+  <meta name="author" content="Roberto Sánchez Vargas" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Roberto Sánchez Vargas · Instructional Designer" />
+  <meta property="og:description" content="Technical Curriculum Developer con 9+ años diseñando aprendizaje en Fortune 500." />
+  <meta property="og:type" content="website" />
+
+  <title>Roberto Sánchez Vargas · Technical Curriculum Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Base stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .hero-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, transparent, var(--teal) 20%, var(--teal) 80%, transparent);
+      z-index: 2;
+    }
+
+    .hero-bg-noise {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0, 180, 166, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 85% 20%, rgba(201, 168, 76, 0.04) 0%, transparent 60%);
+      z-index: 0;
+    }
+
+    .hero-dot-grid {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-image: radial-gradient(circle, rgba(0, 180, 166, 0.12) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(ellipse 80% 80% at 80% 50%, black 30%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 80% 50%, black 30%, transparent 100%);
+      z-index: 0;
+    }
+
+    .hero-circle-1 { width: 520px; height: 520px; right: -80px; top: 50%; transform: translateY(-50%); }
+    .hero-circle-2 { width: 340px; height: 340px; right:  80px; top: 50%; transform: translateY(-50%); }
+    .hero-circle-3 { width: 180px; height: 180px; right: 200px; top: 50%; transform: translateY(-50%); }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 0 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      justify-content: center;
+    }
+
+    .hero-left { display: flex; flex-direction: column; gap: 0; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    .hero-name {
+      font-family: var(--head);
+      font-weight: 800;
+      font-size: clamp(3.5rem, 9vw, 7.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name .line-teal { color: var(--teal); }
+    .hero-name .line-dim  {
+      color: rgba(232, 234, 240, 0.35);
+      font-size: clamp(2rem, 5vw, 4rem);
+      letter-spacing: 0.04em;
+      margin-top: 0.25rem;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-subtitle strong { color: var(--off); font-weight: 500; }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-pill {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      padding: 0.4em 1em;
+      border-radius: 999px;
+      background: rgba(201, 168, 76, 0.06);
+    }
+
+    .hero-pill-sep {
+      color: rgba(201, 168, 76, 0.3);
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+
+    .hero-right {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.25rem;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat-card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 180px;
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition);
+      flex: 0 0 auto;
+    }
+
+    .hero-stat-card:hover { transform: translateX(-4px); }
+
+    .hero-stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .icon-teal { background: rgba(0, 180, 166, 0.12); }
+    .icon-gold  { background: rgba(201, 168, 76, 0.12); }
+    .icon-off   { background: rgba(232, 234, 240, 0.08); }
+
+    .hero-stat-value {
+      font-family: var(--head);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero-stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 2;
+    }
+
+    .hero-scroll span {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(180deg, var(--teal), transparent);
+      animation: scroll-anim 2s ease-in-out infinite;
+    }
+
+    @keyframes scroll-anim {
+      0%   { transform: scaleY(0); transform-origin: top;    opacity: 1; }
+      50%  { transform: scaleY(1); transform-origin: top;    opacity: 1; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ─────────────────────────────────────────
+       ABOUT
+    ───────────────────────────────────────── */
+    .about { background: var(--bg-alt); padding: 7rem 0 6rem; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-left  { display: flex; flex-direction: column; gap: 1.75rem; }
+
+    .about-heading {
+      font-family: var(--head);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .about-heading em { font-style: normal; color: var(--teal); }
+
+    .about-bio { display: flex; flex-direction: column; gap: 1rem; }
+
+    .about-bio p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--off);
+      font-weight: 300;
+    }
+
+    .about-bio p strong { font-weight: 500; color: var(--white); }
+
+    .about-companies { display: flex; flex-direction: column; gap: 1rem; }
+
+    .about-companies-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .companies-row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+
+    .company-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.1rem;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--off);
+      transition: all var(--transition);
+    }
+
+    .company-badge:hover { border-color: var(--teal); color: var(--teal); background: rgba(0,180,166,0.05); }
+
+    .company-badge .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .dot-amazon   { background: #FF9900; }
+    .dot-experian { background: #CC0000; }
+    .dot-service  { background: #62D84E; }
+
+    .about-values { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .about-value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--off);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    .value-icon { color: var(--teal); font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0; }
+
+    .about-right { display: flex; flex-direction: column; gap: 1.5rem; position: relative; }
+
+    .about-deco {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 180, 166, 0.08);
+      top: -60px; right: -60px;
+      pointer-events: none;
+    }
+
+    .about-deco-2 {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      top: 40px; right: 0;
+      pointer-events: none;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stat-block {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), border-color var(--transition);
+    }
+
+    .stat-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+
+    .stat-block-teal::before { background: var(--teal); }
+    .stat-block-gold::before  { background: var(--gold); }
+    .stat-block:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.1); }
+
+    .stat-number {
+      font-family: var(--head);
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    .stat-number .stat-accent { font-size: 2rem; }
+    .stat-teal .stat-accent   { color: var(--teal); }
+    .stat-gold .stat-accent   { color: var(--gold); }
+
+    .stat-label { font-size: 0.85rem; font-weight: 500; color: var(--off); line-height: 1.4; }
+    .stat-desc  { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
+
+    .about-philosophy {
+      background: linear-gradient(135deg, rgba(0,180,166,0.08), rgba(201,168,76,0.05));
+      border: 1px solid rgba(0,180,166,0.15);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .philosophy-quote {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--off);
+      line-height: 1.7;
+      font-weight: 300;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .philosophy-quote::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--teal), var(--gold));
+      border-radius: 2px;
+    }
+
+    .philosophy-author {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .avatar-frame {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--card2);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    .avatar-initials {
+      font-family: var(--head);
+      font-size: 5rem;
+      font-weight: 800;
+      color: rgba(0,180,166,0.2);
+      letter-spacing: -0.04em;
+      user-select: none;
+    }
+
+    /* ─────────────────────────────────────────
+       PROJECTS
+    ───────────────────────────────────────── */
+    .projects { background: var(--bg); }
+
+    .section-header-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-heading {
+      font-family: var(--head);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .section-heading em { font-style: normal; color: var(--teal); }
+
+    .section-sub {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .project-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0,180,166,0.2);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 32px rgba(0,180,166,0.08);
+    }
+
+    .project-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .project-thumb-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thumb-edunova    { background: linear-gradient(135deg, #0f1e2d, #0d2137, #0a1a2b); }
+    .thumb-rsv        { background: linear-gradient(135deg, #1a1200, #2a1e00, #1a1500); }
+    .thumb-servicenow { background: linear-gradient(135deg, #0d1a0d, #112211, #0a1a0a); }
+
+    .thumb-illustration { width: 80%; height: 80%; opacity: 0.85; }
+
+    .project-thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(28,32,48,0.95) 100%);
+    }
+
+    .project-badge-wrapper { position: absolute; top: 1rem; left: 1rem; z-index: 2; }
+    .project-year          { position: absolute; top: 1rem; right: 1rem; font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; z-index: 2; }
+
+    .project-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+    }
+
+    .project-title { font-family: var(--head); font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.2; }
+    .project-desc  { font-size: 0.875rem; color: var(--muted); line-height: 1.7; flex: 1; }
+
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.25rem; }
+
+    .project-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+      transition: gap var(--transition);
+    }
+
+    .project-link:hover { gap: 0.7rem; }
+    .project-link:hover svg { transform: translateX(3px); }
+    .project-link svg { transition: transform var(--transition); }
+
+    .project-status      { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .status-live::before { content: '● '; color: var(--teal); font-size: 0.6rem; }
+
+    .projects-cta { text-align: center; margin-top: 3.5rem; }
+    .projects-cta p { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.25rem; }
+
+    /* ─────────────────────────────────────────
+       SKILLS
+    ───────────────────────────────────────── */
+    .skills { background: var(--bg-alt); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+    }
+
+    .skill-group {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), border-color var(--transition);
+    }
+
+    .skill-group:hover { transform: translateY(-3px); border-color: rgba(0,180,166,0.15); }
+
+    .skill-group::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .sg-teal::before   { background: linear-gradient(90deg, var(--teal), transparent); }
+    .sg-gold::before   { background: linear-gradient(90deg, var(--gold), transparent); }
+    .sg-purple::before { background: linear-gradient(90deg, #8B5CF6, transparent); }
+    .sg-blue::before   { background: linear-gradient(90deg, #3B82F6, transparent); }
+
+    .skill-group-bg-icon {
+      position: absolute;
+      right: 1.5rem; top: 1.5rem;
+      font-size: 5rem;
+      opacity: 0.04;
+      user-select: none;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .skill-group-header { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .skill-group-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .icon-bg-teal   { background: rgba(0,180,166,0.12); }
+    .icon-bg-gold   { background: rgba(201,168,76,0.12); }
+    .icon-bg-purple { background: rgba(139,92,246,0.12); }
+    .icon-bg-blue   { background: rgba(59,130,246,0.12); }
+
+    .skill-group-title { font-family: var(--head); font-size: 1.05rem; font-weight: 700; color: var(--white); }
+    .skill-group-desc  { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+    .in-progress-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8B5CF6;
+      background: rgba(139,92,246,0.1);
+      border: 1px solid rgba(139,92,246,0.2);
+      padding: 0.2em 0.6em;
+      border-radius: 999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .in-progress-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #8B5CF6;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35em 0.85em;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 400;
+      background: rgba(255,255,255,0.05);
+      color: var(--off);
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: all var(--transition);
+      cursor: default;
+    }
+
+    .skill-pill:hover {
+      background: rgba(0,180,166,0.08);
+      border-color: rgba(0,180,166,0.2);
+      color: var(--teal);
+    }
+
+    .skill-pill-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+    .level-high   { background: var(--teal); }
+    .level-mid    { background: var(--gold); }
+    .level-learn  { background: #8B5CF6; }
+
+    .skill-progress-row  { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.25rem; }
+    .skill-bar-item      { display: flex; flex-direction: column; gap: 0.3rem; }
+
+    .skill-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .skill-bar-track {
+      height: 4px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+      width: 0%;
+    }
+
+    .fill-teal   { background: linear-gradient(90deg, var(--teal), #00d4c5); }
+    .fill-gold   { background: linear-gradient(90deg, var(--gold), #e0be6b); }
+    .fill-purple { background: linear-gradient(90deg, #8B5CF6, #a78bfa); }
+    .fill-blue   { background: linear-gradient(90deg, #3B82F6, #60a5fa); }
+    .skill-bar-fill.animated { width: var(--target-width); }
+
+    .skills-legend {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); }
+    .legend-dot  { width: 8px; height: 8px; border-radius: 50%; }
+
+    /* ─────────────────────────────────────────
+       CONTACT
+    ───────────────────────────────────────── */
+    .contact {
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-deco-1 { width: 600px; height: 600px; top: 50%; left: 50%; transform: translate(-50%,-50%); opacity: 0.6; }
+    .contact-deco-2 { width: 380px; height: 380px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    .contact-deco-3 { width: 200px; height: 200px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+
+    .contact-glow {
+      position: absolute;
+      width: 400px; height: 400px;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      background: radial-gradient(ellipse, rgba(0,180,166,0.06), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .contact-heading {
+      font-family: var(--head);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-heading span:first-child { color: var(--teal); }
+
+    .contact-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 480px;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .contact-sub strong { color: var(--off); font-weight: 500; }
+
+    .contact-cards { display: flex; flex-direction: column; gap: 1rem; width: 100%; margin-bottom: 2.5rem; }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .contact-card:hover {
+      border-color: rgba(0,180,166,0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,180,166,0.1);
+    }
+
+    .contact-card-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.3rem;
+    }
+
+    .cc-icon-teal { background: rgba(0,180,166,0.12); }
+    .cc-icon-blue { background: rgba(10,102,194,0.15); }
+
+    .contact-card-text { flex: 1; }
+    .contact-card-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
+    .contact-card-value { font-size: 0.95rem; font-weight: 500; color: var(--white); }
+
+    .contact-card-arrow { color: var(--muted); transition: all var(--transition); flex-shrink: 0; }
+    .contact-card:hover .contact-card-arrow { color: var(--teal); transform: translateX(4px); }
+
+    .contact-cv {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.05));
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: var(--radius);
+      padding: 1.1rem 2rem;
+      color: var(--gold);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: all var(--transition);
+      text-decoration: none;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .contact-cv:hover {
+      background: linear-gradient(135deg, rgba(201,168,76,0.2), rgba(201,168,76,0.08));
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,0.2);
+    }
+
+    .cv-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px; height: 32px;
+      background: rgba(201,168,76,0.15);
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .contact-sep {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent);
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-signature { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+
+    .signature-title { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+
+    .signature-values { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+    .signature-value {
+      font-family: var(--head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .signature-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(201,168,76,0.35); }
+    .signature-name { margin-top: 0.5rem; font-size: 0.78rem; color: var(--muted); letter-spacing: 0.08em; }
+
+    .contact-social { display: flex; gap: 1rem; margin-top: 1.5rem; }
+
+    .social-link {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+
+    .social-link img {
+      width: 18px; height: 18px;
+      filter: grayscale(1) brightness(0.6);
+      transition: filter var(--transition);
+    }
+
+    .social-link:hover {
+      background: rgba(0,180,166,0.1);
+      border-color: rgba(0,180,166,0.25);
+      transform: translateY(-2px);
+    }
+
+    .social-link:hover img { filter: grayscale(0) brightness(1); }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE GLOBAL
+    ───────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-content   { padding: 6rem 2rem 4rem; gap: 3rem; }
+      .hero-right     { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+      .hero-stat-card { min-width: 160px; flex: 0 1 calc(50% - 0.625rem); }
+      .about-grid     { grid-template-columns: 1fr; gap: 3rem; }
+      .projects-grid  { grid-template-columns: 1fr 1fr; }
+      .skills-grid    { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content   { padding: 5.5rem 1.5rem 4rem; }
+      .hero-right     { flex-direction: column; }
+      .hero-stat-card { width: 100%; min-width: auto; }
+      .projects-grid  { grid-template-columns: 1fr; }
+      .skills-grid    { grid-template-columns: 1fr; }
+      .stat-grid      { grid-template-columns: 1fr 1fr; }
+
+    @media (max-width: 600px) {
+      .stat-grid    { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .stat-number  { font-size: 2.25rem; }
+      .contact-heading { font-size: clamp(2.5rem, 10vw, 4rem); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" role="progressbar" aria-label="Progreso de scroll" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav class="navbar" id="mainNavbar" aria-label="Navegación principal">
+    <div class="navbar-inner">
+
+      <button class="navbar-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links" id="navLinks" role="navigation">
+        <a href="#hero">Inicio</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#contact" class="navbar-cta">Hablemos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section id="hero" class="section hero">
+
+    <div class="hero-bar"      aria-hidden="true"></div>
+    <div class="hero-bg-noise" aria-hidden="true"></div>
+    <div class="hero-dot-grid" aria-hidden="true"></div>
+
+    <div class="deco-circle deco-circle-teal hero-circle-1" aria-hidden="true"></div>
+    <div class="deco-circle deco-circle-gold hero-circle-2" aria-hidden="true"></div>
+    <div class="deco-circle deco-circle-teal hero-circle-3" aria-hidden="true"></div>
+
+    <div class="hero-content">
+
+      <div class="hero-left">
+        <h1 class="hero-name fade-up delay-1">
+          <span>ROBERTO</span>
+          <span class="line-teal">SÁNCHEZ</span>
+          <span>VARGAS</span>
+          <span class="line-dim">L&amp;D · ENABLEMENT · DESIGN</span>
+        </h1>
+
+        <p class="hero-subtitle fade-up delay-2">
+          <strong>9+ años</strong> diseñando experiencias de aprendizaje escalables en
+          <strong>Amazon</strong>, <strong>Experian</strong> y <strong>ServiceNow</strong>.
+          Transformo conocimiento técnico complejo en contenido que impulsa resultados reales.
+        </p>
+
+        <div class="hero-pills fade-up delay-3" role="list" aria-label="Valores profesionales">
+          <span class="hero-pill" role="listitem">Claridad</span>
+          <span class="hero-pill-sep" aria-hidden="true">·</span>
+          <span class="hero-pill" role="listitem">Autoridad</span>
+          <span class="hero-pill-sep" aria-hidden="true">·</span>
+          <span class="hero-pill" role="listitem">Propósito</span>
+        </div>
+
+        <div class="hero-ctas fade-up delay-4">
+          <a href="#projects" class="btn-primary">
+            Ver proyectos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn-outline">Hablemos</a>
+          <a href="cv-roberto-sanchez.pdf" class="btn-outline" download aria-label="Descargar CV en PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            CV
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-label="Estadísticas profesionales">
+        <article class="hero-stat-card fade-in delay-2">
+          <div class="hero-stat-icon icon-teal" aria-hidden="true">🏆</div>
+          <div>
+            <div class="hero-stat-value">9<span class="teal">+</span></div>
+            <div class="hero-stat-label">Años de experiencia</div>
+          </div>
+        </article>
+        <article class="hero-stat-card fade-in delay-3">
+          <div class="hero-stat-icon icon-gold" aria-hidden="true">🌐</div>
+          <div>
+            <div class="hero-stat-value">3</div>
+            <div class="hero-stat-label">Fortune 500</div>
+          </div>
+        </article>
+        <article class="hero-stat-card fade-in delay-4">
+          <div class="hero-stat-icon icon-off" aria-hidden="true">📚</div>
+          <div>
+            <div class="hero-stat-value">7<span class="teal">+</span></div>
+            <div class="hero-stat-label">Años en L&amp;D</div>
+          </div>
+        </article>
+        <article class="hero-stat-card fade-in delay-5">
+          <div class="hero-stat-icon icon-teal" aria-hidden="true">🎓</div>
+          <div>
+            <div class="hero-stat-value">Fundatec</div>
+            <div class="hero-stat-label">Técnico en Diseño Web</div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <div class="section-sep" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-left">
+          <div class="section-label fade-in">Sobre mí</div>
+          <h2 class="about-heading fade-up delay-1">
+            Diseño aprendizaje que<br><em>mueve personas</em>
+          </h2>
+          <div class="about-bio fade-up delay-2">
+            <p>
+              Soy <strong>Roberto Sánchez Vargas</strong>, Technical Curriculum Developer e
+              Instructional Designer con más de <strong>9 años de experiencia</strong>
+              creando programas de habilitación para equipos técnicos y comerciales en
+              empresas de clase mundial.
+            </p>
+            <p>
+              Mi trabajo vive en la intersección del diseño instruccional, la tecnología
+              y la narrativa. Creo en contenido que no solo informa, sino que
+              <strong>transforma comportamientos</strong> y genera resultados medibles.
+            </p>
+            <p>
+              Actualmente complemento mi trayectoria con estudios avanzados en
+              <strong>Diseño Web en Fundatec</strong>, donde integro principios de UX/UI
+              a mis propuestas de aprendizaje digital.
+            </p>
+          </div>
+
+          <div class="about-companies fade-up delay-3">
+            <span class="about-companies-label">Experiencia en</span>
+            <div class="companies-row" role="list" aria-label="Empresas">
+              <span class="company-badge" role="listitem"><span class="dot dot-amazon"></span> Amazon</span>
+              <span class="company-badge" role="listitem"><span class="dot dot-experian"></span> Experian</span>
+              <span class="company-badge" role="listitem"><span class="dot dot-service"></span> ServiceNow</span>
+            </div>
+          </div>
+
+          <div class="about-values fade-up delay-4">
+            <div class="about-value-item"><span class="value-icon" aria-hidden="true">◆</span><span>Traduzco conocimiento técnico complejo en experiencias de aprendizaje claras y escalables.</span></div>
+            <div class="about-value-item"><span class="value-icon" aria-hidden="true">◆</span><span>Dominio de modelos instruccionales modernos: ADDIE, SAM, backward design.</span></div>
+            <div class="about-value-item"><span class="value-icon" aria-hidden="true">◆</span><span>Visión de datos: diseño con métricas de performance y KPIs de L&amp;D desde el inicio.</span></div>
+            <div class="about-value-item"><span class="value-icon" aria-hidden="true">◆</span><span>Colaboración cross-funcional con product, engineering y sales enablement.</span></div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="about-deco"   aria-hidden="true"></div>
+          <div class="about-deco-2" aria-hidden="true"></div>
+
+          <div class="fade-in delay-1" style="position:relative;z-index:1;">
+            <div class="avatar-frame">
+              <span class="avatar-initials" aria-hidden="true">RSV</span>
+            </div>
+          </div>
+
+          <div class="stat-grid" role="list">
+            <article class="stat-block stat-block-teal fade-up delay-2" role="listitem">
+              <div class="stat-number stat-teal">9<span class="stat-accent">+</span></div>
+              <div class="stat-label">Años de experiencia</div>
+              <div class="stat-desc">En diseño instruccional y desarrollo de contenido</div>
+            </article>
+            <article class="stat-block stat-block-gold fade-up delay-3" role="listitem">
+              <div class="stat-number stat-gold">3</div>
+              <div class="stat-label">Fortune 500</div>
+              <div class="stat-desc">Amazon, Experian, ServiceNow</div>
+            </article>
+            <article class="stat-block stat-block-teal fade-up delay-3" role="listitem">
+              <div class="stat-number stat-teal">7<span class="stat-accent">+</span></div>
+              <div class="stat-label">Años en L&amp;D</div>
+              <div class="stat-desc">Learning &amp; Development corporativo</div>
+            </article>
+            <article class="stat-block stat-block-gold fade-up delay-4" role="listitem">
+              <div class="stat-number stat-gold">∞</div>
+              <div class="stat-label">Curiosidad</div>
+              <div class="stat-desc">Fundatec · Diseño Web en curso</div>
+            </article>
+          </div>
+
+          <div class="about-philosophy fade-up delay-5">
+            <blockquote class="philosophy-quote">
+              "El buen diseño instruccional no se ve — solo se siente cuando alguien
+              finalmente entiende lo que necesitaba entender."
+            </blockquote>
+            <p class="philosophy-author">— Roberto Sánchez Vargas</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-sep" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════
+       PROJECTS
+  ════════════════════════════════════════ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+
+      <header class="section-header-center">
+        <div class="section-label fade-in">Proyectos seleccionados</div>
+        <h2 class="section-heading fade-up delay-1">Trabajo que <em>habla por sí solo</em></h2>
+        <p class="section-sub fade-up delay-2">Una muestra de proyectos reales donde diseño instruccional, estrategia visual y tecnología convergen.</p>
+      </header>
+
+      <div class="projects-grid" role="list">
+
+        <!-- ── PROYECTO 0: EduNova ── -->
+        <article class="project-card fade-up delay-1" role="listitem">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0f1e2d 0%,#0d2137 50%,#0a1a2b 100%);">
+            <div class="project-thumb-inner">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:85%;height:85%;opacity:0.9;">
+                <defs>
+                  <linearGradient id="eduGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgba(0,180,166,0.25);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgba(0,180,166,0.08);stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <rect x="40" y="30" width="240" height="120" rx="8" fill="rgba(0,180,166,0.04)" stroke="rgba(0,180,166,0.15)" stroke-width="1.5"/>
+                <rect x="40" y="30" width="240" height="25" rx="8" fill="url(#eduGrad)"/>
+                <text x="100" y="50" font-family="Trebuchet MS, sans-serif" font-size="12" font-weight="700" fill="rgba(0,180,166,0.8)">EduNova</text>
+                <g>
+                  <rect x="55" y="65" width="60" height="70" rx="4" fill="rgba(0,180,166,0.06)" stroke="rgba(0,180,166,0.15)" stroke-width="1"/>
+                  <rect x="55" y="65" width="60" height="15" rx="4" fill="rgba(0,180,166,0.12)"/>
+                  <rect x="60" y="72" width="35" height="3" rx="1.5" fill="rgba(0,180,166,0.35)"/>
+                  <rect x="60" y="80" width="48" height="3" rx="1.5" fill="rgba(255,255,255,0.08)"/>
+                  <rect x="60" y="87" width="48" height="3" rx="1.5" fill="rgba(255,255,255,0.06)"/>
+                  <rect x="60" y="108" width="35" height="2.5" rx="1" fill="rgba(0,180,166,0.25)"/>
+                  <rect x="130" y="65" width="60" height="70" rx="4" fill="rgba(0,180,166,0.06)" stroke="rgba(0,180,166,0.15)" stroke-width="1"/>
+                  <rect x="130" y="65" width="60" height="15" rx="4" fill="rgba(0,180,166,0.12)"/>
+                  <rect x="135" y="72" width="35" height="3" rx="1.5" fill="rgba(0,180,166,0.35)"/>
+                  <rect x="135" y="80" width="48" height="3" rx="1.5" fill="rgba(255,255,255,0.08)"/>
+                  <rect x="135" y="87" width="48" height="3" rx="1.5" fill="rgba(255,255,255,0.06)"/>
+                  <rect x="135" y="108" width="35" height="2.5" rx="1" fill="rgba(0,180,166,0.25)"/>
+                  <rect x="205" y="65" width="60" height="70" rx="4" fill="rgba(0,180,166,0.06)" stroke="rgba(0,180,166,0.15)" stroke-width="1"/>
+                  <rect x="205" y="65" width="60" height="15" rx="4" fill="rgba(0,180,166,0.12)"/>
+                  <rect x="210" y="72" width="35" height="3" rx="1.5" fill="rgba(0,180,166,0.35)"/>
+                  <rect x="210" y="80" width="48" height="3" rx="1.5" fill="rgba(255,255,255,0.08)"/>
+                  <rect x="210" y="87" width="48" height="3" rx="1.5" fill="rgba(255,255,255,0.06)"/>
+                  <rect x="210" y="108" width="35" height="2.5" rx="1" fill="rgba(0,180,166,0.25)"/>
+                </g>
+                <circle cx="280" cy="60" r="20" fill="none" stroke="rgba(0,180,166,0.1)" stroke-width="1"/>
+                <circle cx="280" cy="60" r="12" fill="none" stroke="rgba(0,180,166,0.08)" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="project-thumb-overlay"></div>
+            <div class="project-badge-wrapper"><span class="badge">UX/UI · E-Learning</span></div>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">EduNova</h3>
+            <p class="project-desc">Diseño UX/UI completo para plataforma de e-learning. Incluye landing page, catálogo de cursos, login, carrito de compra, checkout, dashboard de usuario, página de contacto y sección corporativa. 9 pantallas en Figma.</p>
+            <div class="project-tags">
+              <span class="pill-tag">Figma</span>
+              <span class="pill-tag">UX/UI</span>
+              <span class="pill-tag">E-Learning</span>
+              <span class="pill-tag">Web Design</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="project-edunova.html" class="project-link">Ver proyecto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <span class="project-status status-live">Entregado</span>
+          </div>
+        </article>
+
+        <!-- ── PROYECTO 1: Lunaria ── -->
+        <article class="project-card fade-up delay-2" role="listitem">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0d1218 0%,#141e2a 100%);">
+            <div class="project-thumb-inner">
+              <img src="img/Proyecto%20Lunaria/Mock%20ups/robertosanchezvargas%20mock%20up%201.png"
+                   alt="Lunaria — mock up"
+                   style="width:100%;height:100%;object-fit:cover;opacity:0.88;" />
+            </div>
+            <div class="project-thumb-overlay"></div>
+            <div class="project-badge-wrapper"><span class="badge">Identidad Visual</span></div>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Lunaria</h3>
+            <p class="project-desc">Identidad de marca completa para Instagram: sistema de logos, paleta, tipografía, plantillas de publicaciones, historias destacadas, animaciones y reel publicitario.</p>
+            <div class="project-tags">
+              <span class="pill-tag">Figma</span>
+              <span class="pill-tag">Adobe Photoshop</span>
+              <span class="pill-tag">Motion Design</span>
+              <span class="pill-tag">Branding</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="project-lunaria.html" class="project-link">Ver proyecto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <span class="project-status status-live">Entregado</span>
+          </div>
+        </article>
+
+        <!-- ── PROYECTO 2: Portada de Libro ── -->
+        <article class="project-card fade-up delay-3" role="listitem">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1a1000 0%,#2b1d00 100%);">
+            <div class="project-thumb-inner">
+              <img src="img/Proyecto%20Portada%20de%20libro/robertosanchezvargas%20Portada.png"
+                   alt="Portada de libro — diseño final"
+                   style="width:100%;height:100%;object-fit:contain;padding:0.75rem;opacity:0.92;" />
+            </div>
+            <div class="project-thumb-overlay"></div>
+            <div class="project-badge-wrapper"><span class="badge badge-gold">Editorial</span></div>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Portada de Libro</h3>
+            <p class="project-desc">Diseño de portada editorial con composición tipográfica, jerarquía visual y aplicación de ilustración. Incluye diseño final y dos variaciones de mock up en formato físico.</p>
+            <div class="project-tags">
+              <span class="pill-tag">Figma</span>
+              <span class="pill-tag">Adobe Illustrator</span>
+              <span class="pill-tag">Editorial</span>
+              <span class="pill-tag">Tipografía</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="project-portada-libro.html" class="project-link">Ver proyecto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <span class="project-status status-live">Entregado</span>
+          </div>
+        </article>
+
+        <!-- ── PROYECTO 3: Gastify ── -->
+        <article class="project-card fade-up delay-4" role="listitem">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#140a00 0%,#1e1200 100%);">
+            <div class="project-thumb-inner">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:80%;height:80%;opacity:0.85;">
+                <rect x="110" y="15" width="100" height="155" rx="14" fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+                <rect x="120" y="30" width="80" height="125" rx="6" fill="rgba(20,15,0,0.9)"/>
+                <rect x="120" y="30" width="80" height="22" rx="6" fill="rgba(201,168,76,0.18)"/>
+                <rect x="128" y="37" width="40" height="4" rx="2" fill="rgba(201,168,76,0.6)"/>
+                <rect x="124" y="58" width="72" height="34" rx="5" fill="rgba(201,168,76,0.1)" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+                <rect x="124" y="98" width="72" height="34" rx="5" fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+                <rect x="132" y="64" width="36" height="3" rx="2" fill="rgba(201,168,76,0.45)"/>
+                <rect x="132" y="72" width="52" height="3" rx="2" fill="rgba(255,255,255,0.15)"/>
+                <rect x="132" y="104" width="30" height="3" rx="2" fill="rgba(201,168,76,0.35)"/>
+                <rect x="132" y="112" width="48" height="3" rx="2" fill="rgba(255,255,255,0.12)"/>
+                <rect x="120" y="140" width="80" height="15" rx="0" fill="rgba(201,168,76,0.06)"/>
+                <circle cx="140" cy="147" r="4" fill="rgba(201,168,76,0.4)"/>
+                <circle cx="160" cy="147" r="4" fill="rgba(255,255,255,0.12)"/>
+                <circle cx="180" cy="147" r="4" fill="rgba(255,255,255,0.12)"/>
+                <circle cx="60" cy="50" r="30" fill="none" stroke="rgba(201,168,76,0.1)" stroke-width="1"/>
+                <circle cx="60" cy="50" r="18" fill="none" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+                <circle cx="265" cy="130" r="25" fill="none" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="project-thumb-overlay"></div>
+            <div class="project-badge-wrapper"><span class="badge badge-gold">UX/UI · App</span></div>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Gastify</h3>
+            <p class="project-desc">Diseño de interfaz para aplicación móvil de gestión gastronómica. Flujos de usuario, wireframes de alta fidelidad y prototipo interactivo en Figma. Proyecto colaborativo en equipo.</p>
+            <div class="project-tags">
+              <span class="pill-tag">Figma</span>
+              <span class="pill-tag">UX/UI</span>
+              <span class="pill-tag">Prototipado</span>
+              <span class="pill-tag">Mobile App</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="project-gastify.html" class="project-link">Ver proyecto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <span class="project-status status-live">Entregado</span>
+          </div>
+        </article>
+
+        <!-- ── PROYECTO 4: Un Click Seguro ── -->
+        <article class="project-card fade-up delay-5" role="listitem">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#070d14 0%,#0c1a28 100%);">
+            <div class="project-thumb-inner">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:80%;height:80%;opacity:0.85;">
+                <rect x="25" y="22" width="200" height="136" rx="8" fill="rgba(0,180,166,0.06)" stroke="rgba(0,180,166,0.22)" stroke-width="1.5"/>
+                <rect x="25" y="22" width="200" height="22" rx="8" fill="rgba(0,180,166,0.12)"/>
+                <rect x="25" y="36" width="200" height="8" rx="0" fill="rgba(0,180,166,0.12)"/>
+                <rect x="50" y="27" width="120" height="10" rx="3" fill="rgba(0,180,166,0.1)" stroke="rgba(0,180,166,0.2)" stroke-width="1"/>
+                <rect x="54" y="30" width="55" height="4" rx="2" fill="rgba(0,180,166,0.35)"/>
+                <rect x="38" y="29" width="8" height="7" rx="1.5" fill="rgba(0,180,166,0.5)"/>
+                <path d="M120 60 L150 72 L150 100 Q140 114 120 120 Q100 114 90 100 L90 72 Z" fill="rgba(0,180,166,0.1)" stroke="rgba(0,180,166,0.35)" stroke-width="1.5"/>
+                <path d="M110 88 L116 95 L130 80" stroke="rgba(0,180,166,0.7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="40" y="132" width="80" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+                <rect x="40" y="142" width="60" height="4" rx="2" fill="rgba(255,255,255,0.07)"/>
+                <rect x="155" y="132" width="55" height="4" rx="2" fill="rgba(0,180,166,0.2)"/>
+                <rect x="238" y="40" width="65" height="80" rx="7" fill="rgba(13,20,30,0.95)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <rect x="246" y="52" width="49" height="4" rx="2" fill="rgba(0,180,166,0.4)"/>
+                <rect x="246" y="64" width="38" height="3" rx="2" fill="rgba(255,255,255,0.15)"/>
+                <rect x="246" y="74" width="42" height="3" rx="2" fill="rgba(255,255,255,0.1)"/>
+                <rect x="246" y="90" width="49" height="18" rx="4" fill="rgba(0,180,166,0.15)"/>
+              </svg>
+            </div>
+            <div class="project-thumb-overlay"></div>
+            <div class="project-badge-wrapper"><span class="badge">UX/UI · Web</span></div>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Un Click Seguro</h3>
+            <p class="project-desc">Diseño de interfaz web enfocado en concientización sobre seguridad digital. Arquitectura de información, wireframes de alta fidelidad y prototipo interactivo en Figma.</p>
+            <div class="project-tags">
+              <span class="pill-tag">Figma</span>
+              <span class="pill-tag">UX/UI</span>
+              <span class="pill-tag">Web Design</span>
+              <span class="pill-tag">Ciberseguridad</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="project-un-click-seguro.html" class="project-link">Ver proyecto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <span class="project-status status-live">Entregado</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects-cta fade-up delay-5">
+        <p>¿Quieres ver más trabajo o conocer el proceso detrás de cada proyecto?</p>
+        <a href="#contact" class="btn-outline">
+          Hablemos sobre tu proyecto
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-sep" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════════ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+
+      <header class="section-header-center">
+        <div class="section-label fade-in">Habilidades</div>
+        <h2 class="section-heading fade-up delay-1">El <em>toolkit</em> detrás del trabajo</h2>
+        <p class="section-sub fade-up delay-2">Nueve años afinando herramientas, metodologías y criterio. Aquí está el inventario completo.</p>
+      </header>
+
+      <div class="skills-grid" role="list">
+
+        <!-- Instructional Design -->
+        <article class="skill-group sg-teal fade-up delay-2" role="listitem">
+          <span class="skill-group-bg-icon" aria-hidden="true">📐</span>
+          <div class="skill-group-header">
+            <div class="skill-group-icon icon-bg-teal" aria-hidden="true">📐</div>
+            <h3 class="skill-group-title">Instructional Design</h3>
+            <p class="skill-group-desc">Diseño y arquitectura de experiencias de aprendizaje efectivas.</p>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>ADDIE</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>SAM</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Backward Design</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Bloom's Taxonomy</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Needs Analysis</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Curriculum Development</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Storyboarding</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>Kirkpatrick Model</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Facilitation</span>
+          </div>
+          <div class="skill-progress-row">
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>Curriculum Design</span><span>95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-teal" style="--target-width:95%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>Needs Analysis</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-teal" style="--target-width:90%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>Facilitation</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-teal" style="--target-width:88%"></div></div></div>
+          </div>
+        </article>
+
+        <!-- LMS & Tech -->
+        <article class="skill-group sg-gold fade-up delay-3" role="listitem">
+          <span class="skill-group-bg-icon" aria-hidden="true">⚙️</span>
+          <div class="skill-group-header">
+            <div class="skill-group-icon icon-bg-gold" aria-hidden="true">⚙️</div>
+            <h3 class="skill-group-title">LMS &amp; Tech</h3>
+            <p class="skill-group-desc">Plataformas, estándares y herramientas de autor para e-learning.</p>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Articulate 360</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Rise 360</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Storyline</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>SCORM 1.2 / 2004</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>xAPI / Tin Can</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Workday Learning</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>ServiceNow LMS</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>Moodle</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Confluence</span>
+          </div>
+          <div class="skill-progress-row">
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>Articulate 360</span><span>92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-gold" style="--target-width:92%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>SCORM / xAPI</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-gold" style="--target-width:85%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>LMS Admin</span><span>80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-gold" style="--target-width:80%"></div></div></div>
+          </div>
+        </article>
+
+        <!-- Web & Visual Design -->
+        <article class="skill-group sg-purple fade-up delay-3" role="listitem">
+          <span class="skill-group-bg-icon" aria-hidden="true">🎨</span>
+          <div class="skill-group-header">
+            <div class="skill-group-icon icon-bg-purple" aria-hidden="true">🎨</div>
+            <h3 class="skill-group-title">
+              Web &amp; Visual Design
+              <span class="in-progress-badge"><span class="in-progress-dot"></span>En progreso</span>
+            </h3>
+            <p class="skill-group-desc">Diseño web, UX/UI y comunicación visual. Estudios activos en Fundatec.</p>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>HTML5</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>CSS3</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-learn"></span>JavaScript</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>Figma</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>Design Systems</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>UI/UX Principles</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>Typography</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-learn"></span>Bootstrap 5</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>Color Theory</span>
+          </div>
+          <div class="skill-progress-row">
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>Figma / UI Design</span><span>72%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-purple" style="--target-width:72%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>HTML / CSS</span><span>68%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-purple" style="--target-width:68%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>JavaScript</span><span>45%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-purple" style="--target-width:45%"></div></div></div>
+          </div>
+        </article>
+
+        <!-- Domain Expertise -->
+        <article class="skill-group sg-blue fade-up delay-4" role="listitem">
+          <span class="skill-group-bg-icon" aria-hidden="true">🧠</span>
+          <div class="skill-group-header">
+            <div class="skill-group-icon icon-bg-blue" aria-hidden="true">🧠</div>
+            <h3 class="skill-group-title">Domain Expertise</h3>
+            <p class="skill-group-desc">Conocimiento de industria acumulado en contextos corporativos globales.</p>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Sales Enablement</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Technical Writing</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Onboarding Design</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Knowledge Management</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Stakeholder Management</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>Change Management</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Cross-functional Collab</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-mid"></span>Agile / Scrum</span>
+            <span class="skill-pill"><span class="skill-pill-dot level-high"></span>Content Strategy</span>
+          </div>
+          <div class="skill-progress-row">
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>Sales Enablement</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-blue" style="--target-width:90%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>Knowledge Mgmt</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-blue" style="--target-width:88%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-label"><span>Content Strategy</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill fill-blue" style="--target-width:85%"></div></div></div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="skills-legend fade-in delay-5">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div><span>Dominio avanzado</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div><span>Dominio intermedio</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#8B5CF6"></div><span>En aprendizaje activo</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-sep" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════ -->
+  <section id="contact" class="section contact">
+
+    <div class="deco-circle deco-circle-teal contact-deco-1" aria-hidden="true"></div>
+    <div class="deco-circle deco-circle-gold contact-deco-2" aria-hidden="true"></div>
+    <div class="deco-circle deco-circle-teal contact-deco-3" aria-hidden="true"></div>
+    <div class="contact-glow" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="contact-wrapper">
+
+        <div class="section-label fade-in" style="margin-bottom:1.5rem;">Contacto</div>
+
+        <h2 class="contact-heading fade-up delay-1">
+          Hable<span>mos</span><span style="color:var(--gold)">.</span>
+        </h2>
+
+        <p class="contact-sub fade-up delay-2">
+          Si buscas a alguien que diseñe aprendizaje con <strong>claridad, autoridad y propósito</strong>,
+          estás en el lugar correcto. Disponible para proyectos freelance, posiciones L&amp;D
+          y colaboraciones en diseño digital.
+        </p>
+
+        <div class="contact-cards fade-up delay-3">
+          <a href="mailto:roberto.sanchez@example.com" class="contact-card">
+            <div class="contact-card-icon cc-icon-teal" aria-hidden="true">✉️</div>
+            <div class="contact-card-text">
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-value">roberto.sanchez@example.com</div>
+            </div>
+            <svg class="contact-card-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/roberto-sanchez-vargas" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card-icon cc-icon-blue" aria-hidden="true">
+              <img src="img/linkedin.png" alt="LinkedIn" width="24" height="24" />
+            </div>
+            <div class="contact-card-text">
+              <div class="contact-card-label">LinkedIn</div>
+              <div class="contact-card-value">linkedin.com/in/roberto-sanchez-vargas</div>
+            </div>
+            <svg class="contact-card-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <a href="cv-roberto-sanchez.pdf" download class="contact-cv fade-up delay-4">
+          <div class="cv-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <span>Descargar CV — Roberto Sánchez Vargas</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+
+        <div class="contact-sep" aria-hidden="true"></div>
+
+        <div class="contact-signature fade-in delay-5">
+          <span class="signature-title">Principios que guían mi trabajo</span>
+          <div class="signature-values">
+            <span class="signature-value">Claridad</span>
+            <span class="signature-dot" aria-hidden="true"></span>
+            <span class="signature-value">Autoridad</span>
+            <span class="signature-dot" aria-hidden="true"></span>
+            <span class="signature-value">Propósito</span>
+          </div>
+          <p class="signature-name">Roberto Sánchez Vargas · Technical Curriculum Developer</p>
+          <nav class="contact-social" aria-label="Redes sociales">
+            <a href="https://linkedin.com/in/roberto-sanchez-vargas" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <img src="img/linkedin.png" alt="LinkedIn" width="18" height="18" />
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <img src="img/instagram.png" alt="Instagram" width="18" height="18" />
+            </a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <img src="img/facebook.png" alt="Facebook" width="18" height="18" />
+            </a>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <p class="footer-copy">&copy; 2025 Roberto Sánchez Vargas. Todos los derechos reservados.</p>
+        <nav class="footer-links" aria-label="Navegación de footer">
+          <a href="#about">Sobre mí</a>
+          <a href="#projects">Proyectos</a>
+          <a href="#skills">Habilidades</a>
+          <a href="https://linkedin.com/in/roberto-sanchez-vargas" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════ -->
+  <script src="main.js"></script>
+  <script>
+    /* Skill bars animation on scroll */
+    document.addEventListener('DOMContentLoaded', () => {
+      const bars = document.querySelectorAll('.skill-bar-fill');
+      if (!bars.length) return;
+
+      const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            barObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      bars.forEach(bar => barObserver.observe(bar));
+    });
+  </script>
+
+</body>
+</html>
