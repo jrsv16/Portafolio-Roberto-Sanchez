@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero — Roberto Sánchez Vargas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR (reutilizable)
+  ══════════════════════════════════════ -->
+  <nav class="navbar" id="mainNavbar" aria-label="Navegación principal">
+    <div class="navbar-inner">
+      <a href="01-hero.html" class="navbar-logo"></a>
+      <button class="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="01-hero.html" class="active">Inicio</a>
+        <a href="02-about.html">Sobre mí</a>
+        <a href="03-projects.html">Proyectos</a>
+        <a href="04-skills.html">Habilidades</a>
+        <a href="05-contact.html" class="navbar-cta">Hablemos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero" class="hero">
+
+    <!-- Barra teal izquierda -->
+    <div class="hero-bar" aria-hidden="true"></div>
+
+    <!-- Fondos decorativos -->
+    <div class="hero-bg-noise"  aria-hidden="true"></div>
+    <div class="hero-dot-grid"  aria-hidden="true"></div>
+
+    <!-- Círculos outline -->
+    <div class="deco-circle deco-circle-teal hero-circle-1" aria-hidden="true"></div>
+    <div class="deco-circle deco-circle-gold hero-circle-2" aria-hidden="true"></div>
+    <div class="deco-circle deco-circle-teal hero-circle-3" aria-hidden="true"></div>
+
+    <!-- Contenido -->
+    <div class="hero-content">
+
+      <!-- Columna izquierda -->
+        <h1 class="hero-name fade-up delay-1">
+          <span>ROBERTO</span>
+          <span class="line-teal">SÁNCHEZ</span>
+          <span>VARGAS</span>
+          <span class="line-dim">L&amp;D · ENABLEMENT · DESIGN</span>
+        </h1>
+
+        <p class="hero-subtitle fade-up delay-2">
+          <strong>9+ años</strong> diseñando experiencias de aprendizaje escalables
+          en <strong>Amazon</strong>, <strong>Experian</strong> y <strong>ServiceNow</strong>.
+          Transformo conocimiento técnico complejo en contenido que impulsa resultados reales.
+        </p>
+
+        <!-- Pills de valores -->
+        <div class="hero-pills fade-up delay-3" role="list" aria-label="Valores profesionales">
+          <span class="hero-pill" role="listitem">Claridad</span>
+          <span class="hero-pill-sep" aria-hidden="true">·</span>
+          <span class="hero-pill" role="listitem">Autoridad</span>
+          <span class="hero-pill-sep" aria-hidden="true">·</span>
+          <span class="hero-pill" role="listitem">Propósito</span>
+        </div>
+
+        <!-- Botones CTA -->
+        <div class="hero-ctas fade-up delay-4">
+          <a href="#projects" class="btn-primary">
+            Ver proyectos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn-outline">Hablemos</a>
+          <a href="cv-roberto-sanchez.pdf" class="btn-outline" download aria-label="Descargar CV en PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            CV
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Columna derecha — stat cards -->
+      <div class="hero-right" aria-label="Estadísticas profesionales">
+
+        <article class="hero-stat-card fade-in delay-2">
+          <div class="hero-stat-icon icon-teal" aria-hidden="true">🏆</div>
+          <div>
+            <div class="hero-stat-value">9<span class="teal">+</span></div>
+            <div class="hero-stat-label">Años de experiencia</div>
+          </div>
+        </article>
+
+        <article class="hero-stat-card fade-in delay-3">
+          <div class="hero-stat-icon icon-gold" aria-hidden="true">🌐</div>
+          <div>
+            <div class="hero-stat-value">3</div>
+            <div class="hero-stat-label">Fortune 500</div>
+          </div>
+        </article>
+
+        <article class="hero-stat-card fade-in delay-4">
+          <div class="hero-stat-icon icon-off" aria-hidden="true">📚</div>
+          <div>
+            <div class="hero-stat-value">7<span class="teal">+</span></div>
+            <div class="hero-stat-label">Años en L&amp;D</div>
+          </div>
+        </article>
+
+        <article class="hero-stat-card fade-in delay-5">
+          <div class="hero-stat-icon icon-teal" aria-hidden="true">🎓</div>
+          <div>
+            <div class="hero-stat-value">Fundatec</div>
+            <div class="hero-stat-label">Técnico en Diseño Web</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER (reutilizable)
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo"></div>
+        <p class="footer-copy">&copy; 2025 Roberto Sánchez Vargas. Todos los derechos reservados.</p>
+        <nav class="footer-links" aria-label="Enlaces de footer">
+          <a href="02-about.html">Sobre mí</a>
+          <a href="03-projects.html">Proyectos</a>
+          <a href="https://linkedin.com/in/roberto-sanchez-vargas" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+<!-- SIGUIENTE: 02-about.html — Sección Sobre mí, dos columnas: bio + logos de empresas / stat blocks -->
